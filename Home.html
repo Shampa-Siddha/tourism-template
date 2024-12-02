@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet'>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    
+    body{
+        padding:0;
+        margin:0;
+        font-family: "Poppins";
+    }
+    .main{
+        width:100%;
+       height: 100vh;
+        position: relative;
+     
+    }
+    .img img{
+      border-radius: 30px;
+    }
+   .img img:nth-child(1){
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+   }
+   .img img:nth-child(2){
+    position: absolute;
+    width:100%;
+    height:100vh;
+   }
+   .img img:nth-child(3){
+    position: absolute;
+    width:100%;
+    height:100vh;
+   }
+   .img img:nth-child(4){
+    position: absolute;
+    width:100%;
+    height:100vh;
+   }
+   .masking{
+    width:40vw;
+  height:80vh;
+    
+    z-index:99;
+    position: relative;
+    
+    margin-left: 30px;
+    position: absolute;
+    mask-size: 9% 90%,9% 80%,9% 60%,9% 90%,9% 80%,9% 60%;
+    mask-image: linear-gradient(to bottom,black,rgb(172, 169, 169)),
+    linear-gradient(to bottom,black,black), linear-gradient(to bottom,rgb(0, 0, 0),black), linear-gradient(to bottom,black,black), linear-gradient(to bottom,black,black), linear-gradient(to bottom,black,black), linear-gradient(to bottom,black,black);
+    mask-position:0% ,12%,24%,36%,48%,60%,72%;
+    
+    mask-repeat: no-repeat;
+    
+    
+   }
+   .masking2{
+    animation-name: animate;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+   }
+   @keyframes animate {
+    from{
+        mask-size: 9% 90%,9% 80%,9% 60%,9% 90%,9% 80%,9% 60%;
+    }
+    to{
+        mask-size: 9% 60%,9% 80%,9% 90%,9% 60%,9% 80%,9% 90%;
+    }
+   }
+   .masking3{
+    animation-name: animate2;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+   }
+   @keyframes animate2 {
+    from{
+    
+        mask-size: 9% 60%,9% 80%,9% 90%,9% 60%,9% 80%,9% 90%;
+       
+    }
+    to{
+       
+        mask-size: 9% 90%,9% 80%,9% 60%,9% 90%,9% 80%,9% 60%;
+    }
+   }
+   .masking img:nth-child(1){
+    height: 100%;
+    width:100%;
+    position: absolute;
+   }
+   .masking img:nth-child(2){
+    height: 100%;
+    width:100%;
+    position: absolute;
+   }
+   .masking img:nth-child(3){
+    height: 100%;
+    width:100%;
+    position: absolute;
+   }
+   .masking img:nth-child(4){
+    height: 100%;
+    width:100%;
+    position: absolute;
+   }
+   .layer{
+    position: absolute;
+    height: 100%;
+    width:100%;
+    background-color: black;
+    opacity: 0.7;
+    z-index: 9;
+    overflow: hidden;
+   }
+   .btn1{
+    height:50px;
+    width:50px;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.6;
+    z-index: 999;
+    position: absolute;
+    top:80%;
+    left:80%;
+    border: none;
+   }
+   .btn2{
+    height:50px;
+    width:50px;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.6;
+    z-index: 999;
+    position: absolute;
+    top:80%;
+    left:71%;
+    border: none;
+   }
+   .content{
+    position: absolute;
+    left:70%;
+    font-size: 150%;
+    top:10%;
+    
+   width:20vw;
+    transform: translateY(50%);
+    
+   }
+   .content:nth-child(2){
+    display: none;
+   }
+   .content:nth-child(3){
+    display: none;
+   }
+  .img2{
+    display: none;
+  }
+  .img3{
+    display: none;
+  }
+  .mask-img2{
+    display: none;
+  }
+  .mask-img3{
+    display: none;
+  }
+  .textanimation{
+      animation-name: animate3;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: 1;
+  }
+  @keyframes animate3 {
+    from{
+      opacity:0;
+      transform: translateY(50%);
+    }
+    to{
+      opacity:1;
+      transform: translateY(20%);
+    }
+  }
+  .imganimation{
+    animation-name: animate4;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: 1;
+  }
+  @keyframes animate4 {
+    from{
+      opacity:0;
+    
+    }
+    to{
+      opacity:1;
+      
+    }
+  }
+  @media screen and (min-device-width: 900px) and (max-device-width: 1280px) { 
+   .main{
+    height:100vh;
+   }
+   .masking{
+    height:80vh;
+   }
+}
+@media screen and (min-device-width: 700px) and (max-device-width: 900px) { 
+   .main{
+    height:60vh;
+    top:10%;
+   }
+   .masking{
+    top:20%;
+    height:40vh;
+   }
+}
+@media screen and (min-device-width: 300px) and (max-device-width: 900px) { 
+   .main{
+    height:40vh;
+    top:10%;
+   }
+   .masking{
+    top:20%;
+    height:25vh;
+   }
+   .content{
+    left:50%;
+    top:8%;
+    font-size: 80%;
+    width:20vh;
+   }
+   .btn1{
+    height:25px;
+    width:25px;
+    left:60%;
+    top:75%
+   }
+   .btn2{
+    height:25px;
+    width:25px;
+    top:75%;
+    left:50%;
+   }
+  
+
+}
+
+.feature_headings{
+    padding: 5%;
+    line-height: 2%;
+    padding-bottom: 2%;
+}
+.feature_headings h1{
+    margin: 3.5%;
+    margin-bottom: 0;
+    font-size: 5vw;
+}
+.feature_headings h2{
+    font-size: 3vw;
+    margin: 3.5%;
+    margin-bottom: 1%;
+    margin-top: 0;
+}
+
+.feat{
+    height:100%;
+    padding: 1%;
+    position: relative;
+    
+}
+.feat_sm_box{
+    border:1px solid rgb(223, 223, 223);
+    height:100%;
+    padding:5%;
+    align-content: center;
+    text-align: center;
+    justify-items: center;
+    cursor: pointer;
+
+}
+.icon_box{
+    
+    border-radius: 10px;
+    height: 40%;
+    width:40%;
+}
+.icon_box{
+    text-align: center;
+    align-content: center;
+    font-size: 40px;
+    color: rgb(95, 160, 20);
+    font-weight: 300;
+    box-shadow:  1px 1px 10px -6px rgb(95, 160, 20), 4px 3px 5px -2px #181818
+
+}
+.banner-main{
+  width:100%;
+  height: 100%;
+  padding: 2%;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 2.0rem;
+        padding-left: 2.0rem;
+        color:rgb(95, 160, 20)
+}
+.sm-banner{
+  height: 85vh;
+  
+  width:100%;
+  margin-top: 17vh;
+  overflow: hidden;
+  
+}
+.f_sm_img{
+       width:60vw;
+       height: 100%;
+       background-image: url("images/mountain_path.webp");
+       background-position:center ;
+       background-size: cover;
+       transform: translateX(5%);
+      
+}  
+.s_sm_img{
+  width:45vw;
+  height:85%;
+  
+  position: absolute;
+  top: 7%;
+  left:79%;
+  background-color: #fff;
+  padding: 3%;
+} 
+.s_sm_img_one{
+  background: url("images/s_sm_img1.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+}
+.s_sm_img_two{
+  background: url("images/s_sm_img2.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+}
+.top_destination_banner{
+margin-top: 5vh;
+}
+.top_dest_img_sec{
+  padding: 5%;
+  
+}
+.top_dest_main_img{
+  height: 15vw;
+  
+  position: relative;
+  transition: all 2s ease;
+  overflow: hidden;
+  cursor: pointer;
+ 
+
+}
+.top_dest_layer{
+height:80%;
+width:90%;
+background-color: black;
+opacity: 0.4;
+text-align: center;
+align-content: center;
+position: absolute;
+top:10%;
+left:5%;
+z-index: 99;
+transition: all 1s;
+
+}
+.top_dest_layer2{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #fff;
+  top:0;
+  left:0;
+  opacity:0.5;
+  visibility: hidden;
+}
+.top_dest_main_img:hover .top_dest_layer2{
+visibility: visible;
+}
+.top_dest_main_img:hover img{
+  
+  cursor: pointer;
+  transform: scale(1.5);
+  transition: all 2s ease;
+  
+}
+.top_dest_main_img:hover .top_dest_layer{
+  opacity: 0.6;
+}
+.footer {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 30px 30px 20px 30px;
+  color: #2f2f2f;
+  background-color: #fff;
+  border-top: 1px solid #e5e5e5;
+}
+
+.footer > * {
+  flex:  1 100%;
+}
+
+.footer__addr {
+  margin-right: 1.25em;
+  margin-bottom: 2em;
+}
+
+.footer__logo {
+  font-family: 'Pacifico', cursive;
+  font-weight: 400;
+  text-transform: lowercase;
+  font-size: 1.5rem;
+}
+
+.footer__addr h2 {
+  margin-top: 1.3em;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.nav__title {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.footer address {
+  font-style: normal;
+  color: #999;
+}
+
+.footer__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  max-width: max-content;
+  background-color: rgb(33, 33, 33, 0.07);
+  border-radius: 100px;
+  color: #2f2f2f;
+  line-height: 0;
+  margin: 0.6em 0;
+  font-size: 1rem;
+  padding: 0 1.3em;
+}
+
+.footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer li {
+  line-height: 2em;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer__nav {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.footer__nav > * {
+  flex: 1 50%;
+  margin-right: 1.25em;
+}
+
+.nav__ul a {
+  color: green;
+}
+
+.nav__ul--extra {
+  column-count: 2;
+  column-gap: 1.25em;
+}
+
+.legal {
+  display: flex;
+  flex-wrap: wrap;
+  color: #999;
+}
+  
+.legal__links {
+  display: flex;
+  align-items: center;
+}
+
+.heart {
+  color: #2f2f2f;
+}
+
+@media screen and (min-width: 24.375em) {
+  .legal .legal__links {
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 40.375em) {
+  .footer__nav > * {
+    flex: 1;
+  }
+  
+  .nav__item--extra {
+    flex-grow: 2;
+  }
+  
+  .footer__addr {
+    flex: 1 0px;
+  }
+  
+  .footer__nav {
+    flex: 2 0px;
+  }
+}
+.img_dest{
+  cursor: pointer;
+}
+.dest_layer{
+  height:100%;
+  width:100%;
+  background-color: black;
+  opacity: 0;
+  position: absolute;
+  top:0;
+  left:0;
+  text-align: center;
+  align-content: center;
+  transition: all 0.5s;
+}
+.img_dest:hover .dest_layer{
+  opacity: 0.7;
+}
+.activenav::after{
+  content: "";
+position: absolute;
+height: 2px;
+width:65%;
+background-color: green;
+left:18%;
+bottom:8%;
+transition: all 0.5s;
+
+}
+a{
+  text-decoration: none;
+  color: #fff;
+}
+.navshadow{
+  box-shadow: 3px 4px 13px -9px black;
+  background-color: rgb(223, 222, 222);
+}
+@media screen and (min-device-width: 100px) and (max-device-width: 1000px) {
+  .activenav::after{
+ display: none;
+}
+}
+</style>
+<body>
+    <nav id="nav" style="position: fixed;z-index: 9999;background-color: white;width: 100%;;">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="Home.html">Logo</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item" style="position: relative;">
+                <a class="nav-link activenav" aria-current="page" href="Home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Tour.html">International</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="domestic.html">Domestic</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+              </li>
+             
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+             
+             
+            </ul>
+            <form class="d-flex" role="search">
+             
+              <button class="btn btn-outline-success" type="submit" style="width:200px;background-color:rgb(95, 160, 20) ;color:white">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </nav>
+    <div class="banner-main">
+      <div class="main" style="margin-top: 10vh;" >
+        <div class="layer" >
+            <div class="content textanimation">
+                  <h1 style="color:white;opacity: 0.7;">Paris</h1>
+                  <h6 style="text-align: justify;color: white;opacity: 0.7;font-size:50%;font-weight: 400;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit sapiente consequatur iusto rerum ut similique eum totam, nemo qui dolorum ab ducimus dolores minima, labore quam. Reprehenderit necessitatibus quam molestias?</h6>
+            </div>
+            <div class="content">
+                <h1 style="color:white;opacity: 0.7;">Brazil</h1>
+                <h6 style="text-align: justify;color: white;opacity: 0.7;font-size:50%;font-weight: 400;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit sapiente consequatur iusto rerum ut similique eum totam, nemo qui dolorum ab ducimus dolores minima, labore quam. Reprehenderit necessitatibus quam molestias?</h6>
+          </div>
+          <div class="content">
+            <h1 style="color:white;opacity: 0.7;">Baglakot</h1>
+            <h6 style="text-align: justify;color: white;opacity: 0.7;font-size:50%;font-weight: 400;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit sapiente consequatur iusto rerum ut similique eum totam, nemo qui dolorum ab ducimus dolores minima, labore quam. Reprehenderit necessitatibus quam molestias?</h6>
+      </div>
+        </div>
+       <div class="img img1">
+          <img src="images/dest4.jpg" >
+       </div>
+       <div class="img img2">
+        <img src="images/Brazil.png">
+       </div>
+       <div class="img img3" >
+        <img src="images/Baglakot.jpg">
+       </div>
+       
+       <div class="masking masking2">
+        <img class="msk mask-img1" src="images/dest4.jpg">
+        <img class="msk mask-img2" src="images/Brazil.png">
+        <img class="msk mask-img3" src="images/Baglakot.jpg">
+        
+         
+       </div>
+       <button class="btn1" onclick=nextFun()><i class="fa-solid fa-angle-right"></i></button>
+       <button class="btn2" onclick=prevFun()><i class="fa-solid fa-angle-left"></i></button>
+      
+    </div>
+    </div>
+    
+    <div class="feature_headings">
+      <h1>Start Your Vacation</h1>
+      <h2>With Lots Of Services</h2>
+    </div>
+    <div class="features" style="overflow: hidden;">
+       <div class="container">
+           <div class="row" style="height: 100%;">
+            <div class="col-lg-3 feat col-sm-3 col-md-3 " >
+               <div class="feat_sm_box">  
+                  <div class="icon_box">
+                    <i class="fa-solid fa-ship"></i>
+                  </div>
+                  <div style="margin-top: 7%">
+                    <h6 style="text-align: center;;">Cruise</h6>
+                </div>
+               </div>
+              
+            </div>
+            <div class="col-lg-3 feat col-sm-3 col-md-3 " >
+                <div class="feat_sm_box"> 
+                  <div class="icon_box">
+                    <i class="fa-solid fa-bowl-rice"></i>
+                  </div>
+                  <div style="margin-top: 7%">
+                    <h6 style="text-align: center;;">Hygiened Food</h6>
+                </div>
+                </div>
+               
+            </div>
+            <div class="col-lg-3 feat col-sm-3 col-md-3 " >
+                <div class="feat_sm_box"> 
+                  <div class="icon_box">
+                    <i class="fa-regular fa-sun"></i>
+                  </div>
+                  <div style="margin-top: 7%">
+                    <h6 style="text-align: center;;">Summer Camps</h6>
+                </div>
+                </div>
+                
+            </div>
+            <div class="col-lg-3 feat col-sm-3 col-md-3 " >
+                <div class="feat_sm_box"> 
+                  <div class="icon_box">
+                    <i class="fa-solid fa-mountain-sun"></i>
+                  </div> 
+                  <div style="margin-top: 7%">
+                    <h6 style="text-align: center;;">Mountain Tours</h6>
+                </div>
+                </div>
+                
+
+            </div>
+           </div>
+       </div>
+    </div>
+    <div class="sm-banner ">
+      <div class="f_sm_img " >
+        
+        <div class="s_sm_img" >
+            <div class="s_sm_img_frst_head">
+              <p style="color:rgb(184, 184, 184);margin-bottom: 0;">ABOUT US</p>
+              <h1 style="font-weight: 800;font-size:3vw;">We Provide The Best Tour Packages In Your Budget</h1>
+              <p style="color:rgb(184, 184, 184);font-size:1vw;"> Deleniti  nobis dolore tempora veniam repellat ad sit animi accusamus ducimus itaque explicabo, magnam ea nam perferendis cupiditate ab optio repudiandae.</p>
+              <div class="row">
+                 <div class="col-lg-6 " style="padding:2vh;height:25vh;padding-top: 0;">
+                     <div class="s_sm_img_one">
+
+                     </div>
+                 </div>
+                 <div class="col-lg-6" style="padding: 2vh;padding-top:0;height:25vh">
+                  <div class="s_sm_img_two">
+
+                  </div>
+                 </div> 
+              </div>
+              <button  style="background-color:rgb(95, 160, 20) ;outline: none;border: none;color: #fff;padding: 2%;text-align: center;width:150px;">
+                <a href="Tour.html">BOOK NOW</a>
+              </button>
+            </div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="two_dest container-fluid" style="margin-top: 100px;">
+      <div class="row">
+        <div class="col-lg-6" style="padding: 5%;">
+             <div>
+              <h1 style="font-weight: bold;">Grab The Best Experience</h1>
+              <br>
+              <h6 style="color: grey;text-align: justify;line-height:30px;font-weight: 300;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet, id inventore explicabo modi quas facilis ad excepturi repudiandae optio alias, deleniti delectus. Dignissimos totam illo exercitationem quaerat, voluptate vitae voluptatum?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi at culpa necessitatibus praesentium eum sit nihil blanditiis, laudantium cupiditate inventore laborum a voluptatum maiores quo. Deleniti ducimus et vel doloremque!Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem repellat maiores harum rerum numquam nostrum temporibus, molestiae dolor quas inventore voluptate aspernatur dolores pariatur sapiente nam aliquam ipsam vero nemo?</h6>
+             </div>
+        </div>
+        <div class="col-lg-6" style="padding-top: 5%;padding-right: 5%;padding-bottom: 5%;overflow: hidden;">
+                <h1 style="font-weight: bold;">Make Your Choice Hurry <span style="color:rgb(95, 160, 20);font-weight: bold;">!!</span></h1>
+                <br>
+                <div style="display: flex;justify-content: center;">
+                  <button  style="height:50px;width:200px;background-color:rgb(95, 160, 20) ;color:white;border: none;outline: none;"><a href="domestic.html">DOMESTIC</a></button>
+                  &ensp;&ensp;
+                  <button  style="height:50px;width:200px;background-color:rgb(95, 160, 20) ;color:white;border: none;outline: none;"><a href="Tour.html">INTERNATIONAL</a></button>
+                </div>
+                <DIV style="display: flex;justify-content: center;">
+                  <div style="height:280px;width:280px;border-radius: 50%;background-color: rgb(95, 160, 20);margin-top: 60px;display: flex;justify-content: center;align-items: center;position: relative;">
+                    <img src="images/person-removebg-preview.png" style="position: absolute;top:0%;height:40vh;">
+                    <img src="images/trolley-removebg-preview.png" style="position: absolute;left:40%;height:48vh">
+  
+                  </div>
+                </DIV>
+                
+        </div>
+      </div>
+    </div>
+    <div class="top_destination_banner">
+       <p style="font-family:'Cinzel';color:rgb(95, 160, 20) ;text-align: center;font-size: 3vh;font-weight: 600;">TOP DESTINATIONS</p>
+       <h2 style="font-size: 3vw;text-align: center;font-weight: 600;">Explore Top Destinations</h2>
+       <div class="container" >
+        <div class="row top_dest_img_sec" style="padding: 1%;">
+          <div class="col-lg-3 col-sm-6 col-6" style="height:100vh;padding: 5px;">
+            <div class="img_dest" style="position: relative;;height:40%;width:100%;background-image: url('images/dest1.webp');background-position: center;background-size: cover;margin-bottom: 7px;border-radius: 10px;">
+              <div class="dest_layer" style="color:white;border-radius: 10px;justify-items: center;">
+                  Niagra Falls
+                  <br>
+                  <br>
+                  <div style="width:50px;height:50px;border-radius: 50%;background-color: #fff;align-content: center;text-align: center;">
+                    <a href="singleTour.html"><i style="color:black" class="fa-solid fa-eye"></i></a>
+                  </div>
+              </div>
+              
+              
+            </div>
+            <div class="img_dest" style="position: relative;height:60%;width:100%;background-image: url('images/Baglakot.jpg');background-position: center;background-size: cover;border-radius: 10px;">
+              <div class="dest_layer" style="color:white;border-radius: 10px;justify-items:center">
+                Baglakot
+                 <br>
+                  <br>
+                  <div style="width:50px;height:50px;border-radius: 50%;background-color: #fff;align-content: center;text-align: center;">
+                   <a href="singleTour.html"><i style="color:black" class="fa-solid fa-eye"></i></a>
+                  </div>
+
+              </div>
+            </div>
+           </div>
+           <div class="col-lg-3 col-sm-6 col-6" style="height:100vh;padding: 5px;">
+            <div class="img_dest" style="position: relative;height:70%;width:100%;background-image: url('images/dest6.jpg');background-position: center;background-size: cover;margin-bottom: 7px;border-radius: 10px;">
+              <div class="dest_layer" style="color:white;border-radius: 10px;justify-items:center">
+                Rajasthan
+                 <br>
+                  <br>
+                  <div style="width:50px;height:50px;border-radius: 50%;background-color: #fff;align-content: center;text-align: center;">
+                   <a href="singleTour.html"><i style="color:black" class="fa-solid fa-eye"></i></a>
+                  </div>
+              </div>
+            </div>
+            <div class="img_dest" style="position: relative;height:30%;width:100%;background-image: url('images/Brazil.png');background-position: center;background-size: cover;border-radius: 10px;">
+              <div class="dest_layer" style="color:white;border-radius: 10px;justify-items:center">
+                Brazil
+                 <br>
+                  <br>
+                  <div style="width:50px;height:50px;border-radius: 50%;background-color: #fff;align-content: center;text-align: center;">
+                   <a href="singleTour.html"><i style="color:black" class="fa-solid fa-eye"></i></a>
+                  </div>
+              </div>
+            </div>
+           </div>
+           <div class="col-lg-3 col-sm-6 col-6" style="height:100vh;padding: 5px;">
+            <div class="img_dest" style="position: relative;height:30%;width:100%;background-image: url('images/dest4.jpg');background-position: center;background-size: cover;margin-bottom: 7px;border-radius: 10px;">
+              <div class="dest_layer" style="color:white;border-radius: 10px;justify-items:center">
+                Russia
+                 <br>
+                  <br>
+                  <div style="width:50px;height:50px;border-radius: 50%;background-color: #fff;align-content: center;text-align: center;">
+                   <a href="singleTour.html"><i style="color:black" class="fa-solid fa-eye"></i></a>
+                  </div>
+              </div>
+            </div>
+            <div class="img_dest" style="position: relative;height:70%;width:100%;background-image: url('images/dest5.webp');background-position: center;background-size: cover;border-radius: 10px;">
+              <div class="dest_layer" style="color:white;border-radius: 10px;justify-items:center">
+                Switzerland
+                 <br>
+                  <br>
+                  <div style="width:50px;height:50px;border-radius: 50%;background-color: #fff;align-content: center;text-align: center;">
+                   <a href="singleTour.html"><i style="color:black" class="fa-solid fa-eye"></i></a>
+                  </div>
+              </div>
+            </div>
+           </div>
+           <div class="col-lg-3 col-sm-6 col-6" style="height:100vh;padding: 5px;">
+            <div class="img_dest" style="position: relative;height:40%;width:100%;background-image: url('images/dest2.jpg');background-position: center;background-size: cover;margin-bottom: 7px;border-radius: 10px;">
+              <div class="dest_layer" style="color:white;border-radius: 10px;justify-items:center">
+                Maldives
+                 <br>
+                  <br>
+                  <div style="width:50px;height:50px;border-radius: 50%;background-color: #fff;align-content: center;text-align: center;">
+                   <a href="singleTour.html"><i style="color:black" class="fa-solid fa-eye"></i></a>
+                  </div>
+              </div>
+            </div>
+            <div class="img_dest" style="position: relative;height:60%;width:100%;background-image: url('images/dest3.jpg');background-position: center;background-size: cover;border-radius: 10px;">
+              <div class="dest_layer" style="color:white;border-radius: 10px;justify-items:center">
+                Valley Of Flowers
+                 <br>
+                  <br>
+                  <div style="width:50px;height:50px;border-radius: 50%;background-color: #fff;align-content: center;text-align: center;">
+                   <a href="singleTour.html"><i style="color:black" class="fa-solid fa-eye"></i></a>
+                  </div>
+              </div>
+            </div>
+           </div>
+          </div>
+          <!-- <div class="col-lg-4 col-sm-6 col-6" style="padding:2%">
+           <div class="top_dest_main_img">
+             <img src="images/dest2.jpg" style="height: 100%;width: 100%;;">
+             <div class="top_dest_layer">
+                   <p style="color:#fefff7;margin-bottom: 0;">INDIA</p>
+                   <p style="color:#fff">100 cities</p>
+             </div>
+             <div class="top_dest_layer2">
+
+             </div>
+          </div>
+          </div>
+          <div class="col-lg-4 col-sm-6 col-6" style="padding:2%">
+           <div class="top_dest_main_img">
+             <img src="images/dest3.jpg" style="height: 100%;width: 100%;;">
+             <div class="top_dest_layer">
+                   <p style="color:#fefff7;margin-bottom: 0;">INDIA</p>
+                   <p style="color:#fff">100 cities</p>
+             </div>
+             <div class="top_dest_layer2">
+
+             </div>
+          </div>
+          </div>
+          <div class="col-lg-4 col-sm-6 col-6" style="padding:2%">
+           <div class="top_dest_main_img">
+             <img src="images/dest4.jpg" style="height: 100%;width: 100%;;">
+             <div class="top_dest_layer">
+                   <p style="color:#fefff7;margin-bottom: 0;">INDIA</p>
+                   <p style="color:#fff">100 cities</p>
+             </div>
+             <div class="top_dest_layer2">
+
+             </div>
+          </div>
+          </div>
+          <div class="col-lg-4 col-sm-6 col-6" style="padding:2%">
+           <div class="top_dest_main_img">
+             <img src="images/dest5.webp" style="height: 100%;width: 100%;;">
+             <div class="top_dest_layer">
+                   <p style="color:#fefff7;margin-bottom: 0;">INDIA</p>
+                   <p style="color:#fff">100 cities</p>
+             </div>
+             <div class="top_dest_layer2">
+
+             </div>
+          </div>
+          </div>
+          <div class="col-lg-4 col-sm-6 col-6" style="padding:2%">
+           <div class="top_dest_main_img">
+             <img src="images/dest6.jpg" style="height: 100%;width: 100%;;">
+             <div class="top_dest_layer">
+                   <p style="color:#fefff7;margin-bottom: 0;">INDIA</p>
+                   <p style="color:#fff">100 cities</p>
+             </div>
+             <div class="top_dest_layer2">
+
+             </div>
+          </div>
+          </div> -->
+      </div>
+       </div>
+       
+    </div>
+    <br>
+    <br>
+    <footer class="footer">
+      <div class="footer__addr">
+        <h1 class="footer__logo">Something</h1>
+            
+        <h2>Contact</h2>
+        
+        <address>
+          5534 Somewhere In. The World 22193-10212<br>
+              
+          <a class="footer__btn" href="mailto:example@gmail.com">Email Us</a>
+        </address>
+      </div>
+      
+      <ul class="footer__nav">
+        <li class="nav__item">
+          <h2 class="nav__title">Media</h2>
+    
+          <ul class="nav__ul">
+            <li>
+              <a href="#">Online</a>
+            </li>
+    
+            <li>
+              <a href="#">Print</a>
+            </li>
+                
+            <li>
+              <a href="#">Alternative Ads</a>
+            </li>
+          </ul>
+        </li>
+        
+        <li class="nav__item nav__item--extra">
+          <h2 class="nav__title">Technology</h2>
+          
+          <ul class="nav__ul nav__ul--extra">
+            <li>
+              <a href="#">Hardware Design</a>
+            </li>
+            
+            <li>
+              <a href="#">Software Design</a>
+            </li>
+            
+            <li>
+              <a href="#">Digital Signage</a>
+            </li>
+            
+            <li>
+              <a href="#">Automation</a>
+            </li>
+            
+            <li>
+              <a href="#">Artificial Intelligence</a>
+            </li>
+            
+            <li>
+              <a href="#">IoT</a>
+            </li>
+          </ul>
+        </li>
+        
+        <li class="nav__item">
+          <h2 class="nav__title">Legal</h2>
+          
+          <ul class="nav__ul">
+            <li>
+              <a href="#">Privacy Policy</a>
+            </li>
+            
+            <li>
+              <a href="#">Terms of Use</a>
+            </li>
+            
+            <li>
+              <a href="#">Sitemap</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      
+      <div class="legal">
+        <p>&copy; 2019 Something. All rights reserved.</p>
+        
+        <div class="legal__links">
+          <span>Made with <span class="heart">♥</span> remotely from Anywhere</span>
+        </div>
+      </div>
+    </footer>
+    
+    
+    
+    Resources
+    
+</body>
+</html>
+<script src="scipt.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js" integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/js/all.min.js" integrity="sha512-1JkMy1LR9bTo3psH+H4SV5bO2dFylgOy+UJhMus1zF4VEFuZVu5lsi4I6iIndE4N9p01z1554ZDcvMSjMaqCBQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    var current=-1;
+    const content=document.querySelectorAll(".content");
+    const images=document.querySelectorAll(".img");
+    var length=images.length-2;
+    console.log(length);
+    const mskimg=document.querySelectorAll(".msk");
+    const mainmask=document.querySelector(".masking")
+
+
+
+   function nextFun(){
+    if(current<length){
+      current++
+      content[current].style.display="none";
+      content[current+1].classList.add("textanimation");
+      content[current+1].style.display="block";
+      
+      images[current].style.display="none";
+      images[current+1].style.display="block";
+      images[current+1].classList.add("imganimation");
+
+      mskimg[current].style.display="none";
+      mskimg[current+1].style.display="block";
+
+      
+       if(current==0){
+        document.querySelector(".masking").classList.remove("masking2");
+        document.querySelector(".masking").classList.add("masking3");
+       }
+       if(current==1){
+        document.querySelector(".masking").classList.remove("masking3");
+        document.querySelector(".masking").classList.add("masking2");
+       }
+
+    }
+   
+   }
+
+   function prevFun(){
+    if(current>length-2){
+      current--
+    console.log(current)
+    content[current+1].style.display="block";
+    content[current+2].style.display="none";
+
+   
+    images[current+1].style.display="block";
+    images[current+1].classList.add("imganimation");
+    images[current+2].style.display="none";
+
+    
+      mskimg[current+1].style.display="block";
+      mskimg[current+2].style.display="none";
+
+      if(current==0){
+        document.querySelector(".masking").classList.remove("masking2");
+        document.querySelector(".masking").classList.add("masking3");
+       }
+       if(current==-1){
+        document.querySelector(".masking").classList.remove("masking3");
+        document.querySelector(".masking").classList.add("masking2");
+       }
+    }
+   
+
+   }
+
+  function myfun(){
+    alert("hello")
+   }
+</script>

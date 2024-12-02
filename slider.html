@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    body{
+        padding:0;
+        margin:0;
+        font-family: "Poppins";
+    }
+    .main{
+        width:100%;
+       height: 100vh;
+        position: relative;
+     
+    }
+   .img img:nth-child(1){
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+   }
+   .img img:nth-child(2){
+    position: absolute;
+    width:100%;
+    height:100vh;
+   }
+   .img img:nth-child(3){
+    position: absolute;
+    width:100%;
+    height:100vh;
+   }
+   .img img:nth-child(4){
+    position: absolute;
+    width:100%;
+    height:100vh;
+   }
+   .masking{
+    width:40vw;
+  height:80vh;
+    
+    z-index:99;
+    position: relative;
+    
+    margin-left: 30px;
+    position: absolute;
+    mask-size: 9% 90%,9% 80%,9% 60%,9% 90%,9% 80%,9% 60%;
+    mask-image: linear-gradient(to bottom,black,rgb(172, 169, 169)),
+    linear-gradient(to bottom,black,black), linear-gradient(to bottom,rgb(0, 0, 0),black), linear-gradient(to bottom,black,black), linear-gradient(to bottom,black,black), linear-gradient(to bottom,black,black), linear-gradient(to bottom,black,black);
+    mask-position:0% ,12%,24%,36%,48%,60%,72%;
+    
+    mask-repeat: no-repeat;
+    
+    
+   }
+   .masking2{
+    animation-name: animate;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+   }
+   @keyframes animate {
+    from{
+        mask-size: 9% 90%,9% 80%,9% 60%,9% 90%,9% 80%,9% 60%;
+    }
+    to{
+        mask-size: 9% 60%,9% 80%,9% 90%,9% 60%,9% 80%,9% 90%;
+    }
+   }
+   .masking3{
+    animation-name: animate2;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+   }
+   @keyframes animate2 {
+    from{
+    
+        mask-size: 9% 60%,9% 80%,9% 90%,9% 60%,9% 80%,9% 90%;
+       
+    }
+    to{
+       
+        mask-size: 9% 90%,9% 80%,9% 60%,9% 90%,9% 80%,9% 60%;
+    }
+   }
+   .masking img:nth-child(1){
+    height: 100%;
+    width:100%;
+    position: absolute;
+   }
+   .masking img:nth-child(2){
+    height: 100%;
+    width:100%;
+    position: absolute;
+   }
+   .masking img:nth-child(3){
+    height: 100%;
+    width:100%;
+    position: absolute;
+   }
+   .masking img:nth-child(4){
+    height: 100%;
+    width:100%;
+    position: absolute;
+   }
+   .layer{
+    position: absolute;
+    height: 100%;
+    width:100%;
+    background-color: black;
+    opacity: 0.7;
+    z-index: 9;
+    overflow: hidden;
+   }
+   .btn1{
+    height:50px;
+    width:50px;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.6;
+    z-index: 999;
+    position: absolute;
+    top:80%;
+    left:80%;
+    border: none;
+   }
+   .btn2{
+    height:50px;
+    width:50px;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.6;
+    z-index: 999;
+    position: absolute;
+    top:80%;
+    left:71%;
+    border: none;
+   }
+   .content{
+    position: absolute;
+    left:70%;
+    font-size: 150%;
+    top:10%;
+    
+   width:20vw;
+    transform: translateY(50%);
+    
+   }
+   .content:nth-child(2){
+    display: none;
+   }
+   .content:nth-child(3){
+    display: none;
+   }
+  .img2{
+    display: none;
+  }
+  .img3{
+    display: none;
+  }
+  .mask-img2{
+    display: none;
+  }
+  .mask-img3{
+    display: none;
+  }
+  .textanimation{
+      animation-name: animate3;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: 1;
+  }
+  @keyframes animate3 {
+    from{
+      opacity:0;
+      transform: translateY(50%);
+    }
+    to{
+      opacity:1;
+      transform: translateY(20%);
+    }
+  }
+  .imganimation{
+    animation-name: animate4;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: 1;
+  }
+  @keyframes animate4 {
+    from{
+      opacity:0;
+    
+    }
+    to{
+      opacity:1;
+      
+    }
+  }
+  @media screen and (min-device-width: 900px) and (max-device-width: 1280px) { 
+   .main{
+    height:100vh;
+   }
+   .masking{
+    height:80vh;
+   }
+}
+@media screen and (min-device-width: 700px) and (max-device-width: 900px) { 
+   .main{
+    height:60vh;
+    top:10%;
+   }
+   .masking{
+    top:20%;
+    height:40vh;
+   }
+}
+@media screen and (min-device-width: 300px) and (max-device-width: 900px) { 
+   .main{
+    height:40vh;
+    top:10%;
+   }
+   .masking{
+    top:20%;
+    height:25vh;
+   }
+   .content{
+    left:50%;
+    top:8%;
+    font-size: 80%;
+    width:20vh;
+   }
+   .btn1{
+    height:25px;
+    width:25px;
+    left:60%;
+    top:75%
+   }
+   .btn2{
+    height:25px;
+    width:25px;
+    top:75%;
+    left:50%;
+   }
+}
+
+
+</style>
+<body>
+    <div class="main">
+        <div class="layer">
+            <div class="content textanimation">
+                  <h1 style="color:white;opacity: 0.7;">Paris</h1>
+                  <h6 style="text-align: justify;color: white;opacity: 0.7;font-size:50%;font-weight: 400;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit sapiente consequatur iusto rerum ut similique eum totam, nemo qui dolorum ab ducimus dolores minima, labore quam. Reprehenderit necessitatibus quam molestias?</h6>
+            </div>
+            <div class="content">
+                <h1 style="color:white;opacity: 0.7;">Brazil</h1>
+                <h6 style="text-align: justify;color: white;opacity: 0.7;font-size:50%;font-weight: 400;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit sapiente consequatur iusto rerum ut similique eum totam, nemo qui dolorum ab ducimus dolores minima, labore quam. Reprehenderit necessitatibus quam molestias?</h6>
+          </div>
+          <div class="content">
+            <h1 style="color:white;opacity: 0.7;">Baglakot</h1>
+            <h6 style="text-align: justify;color: white;opacity: 0.7;font-size:50%;font-weight: 400;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit sapiente consequatur iusto rerum ut similique eum totam, nemo qui dolorum ab ducimus dolores minima, labore quam. Reprehenderit necessitatibus quam molestias?</h6>
+      </div>
+        </div>
+       <div class="img img1">
+          <img src="images/Paris.jpg">
+       </div>
+       <div class="img img2">
+        <img src="images/Brazil.png">
+       </div>
+       <div class="img img3" >
+        <img src="images/Baglakot.jpg">
+       </div>
+       
+       <div class="masking masking2">
+        <img class="msk mask-img1" src="images/Paris.jpg">
+        <img class="msk mask-img2" src="images/Brazil.png">
+        <img class="msk mask-img3" src="images/Baglakot.jpg">
+        
+         
+       </div>
+       <button class="btn1" onclick=nextFun()><i class="fa-solid fa-angle-right"></i></button>
+       <button class="btn2" onclick=prevFun()><i class="fa-solid fa-angle-left"></i></button>
+      
+    </div>
+    
+</body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js" integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    var current=-1;
+    const content=document.querySelectorAll(".content");
+    const images=document.querySelectorAll(".img");
+    var length=images.length-2;
+    console.log(length);
+    const mskimg=document.querySelectorAll(".msk");
+    const mainmask=document.querySelector(".masking")
+
+
+
+   function nextFun(){
+    if(current<length){
+      current++
+      content[current].style.display="none";
+      content[current+1].classList.add("textanimation");
+      content[current+1].style.display="block";
+      
+      images[current].style.display="none";
+      images[current+1].style.display="block";
+      images[current+1].classList.add("imganimation");
+
+      mskimg[current].style.display="none";
+      mskimg[current+1].style.display="block";
+
+      
+       if(current==0){
+        document.querySelector(".masking").classList.remove("masking2");
+        document.querySelector(".masking").classList.add("masking3");
+       }
+       if(current==1){
+        document.querySelector(".masking").classList.remove("masking3");
+        document.querySelector(".masking").classList.add("masking2");
+       }
+
+    }
+   
+   }
+
+   function prevFun(){
+    if(current>length-2){
+      current--
+    console.log(current)
+    content[current+1].style.display="block";
+    content[current+2].style.display="none";
+
+   
+    images[current+1].style.display="block";
+    images[current+1].classList.add("imganimation");
+    images[current+2].style.display="none";
+
+    
+      mskimg[current+1].style.display="block";
+      mskimg[current+2].style.display="none";
+
+      if(current==0){
+        document.querySelector(".masking").classList.remove("masking2");
+        document.querySelector(".masking").classList.add("masking3");
+       }
+       if(current==-1){
+        document.querySelector(".masking").classList.remove("masking3");
+        document.querySelector(".masking").classList.add("masking2");
+       }
+    }
+   
+
+   }
+</script>
